@@ -16,6 +16,14 @@
             <input type="text" id="textBusca" placeholder="Buscar..."/>
             <img class="btnBusca" src="search.png" alt="Buscar"/>
         </div>
+
+        <div class="tema-selector">
+            <label for="tema">Tema:</label>
+            <select id="tema" onchange="alterarTema()">
+                <option value="claro">Claro</option>
+                <option value="escuro">Escuro</option>
+            </select>
+        </div>
     </header>
 
     <!-- Nav -->
@@ -43,11 +51,15 @@
         <div class="dropdown">
             <button class="btnMenu">Carros</button>
             <div class="dropdown-content">
+                <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Carros</p>
                 <a href="#">Fiat</a>
                 <a href="#">Hyundai</a>
                 <a href="#">Honda</a>
                 <a href="#">Renault</a>
                 <a href="#">Volkswagen</a>
+                <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Motos</p>
+                <a href="#">Yamaha</a>
+                <a href="#">Suzuki</a>
             </div>
         </div>
 
@@ -63,196 +75,519 @@
 
     <!-- Main -->
     <main>
+
+        <img class="banner" alt="banner" src="banner.jpeg">
+
+        <h1>Carros</h1>
         
-        <div class="todos-cards">
-
+        <section class="secao-carros">
             <div class="card">
-                <img src="Fiat_Argo.jpg">
-                <div class="card-text">
-                    <h4><b>Fiat Argo</b></h4>
-                    <p>Semi novo com bom consumo urbano</p>
-                    <p>Preço: R$ 74.990</p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
+                <img class="card-img" src="Fiat_Argo.jpg" alt="Fiat Argo">
+                <div class="card-info">
+                    <h2>Fiat Argo</h2>
+                    <p class="detalhes-curtos">Ano: 2021 | Modelo: 1.0 Drive</p>
+                    <p class="detalhes-curtos">Preço: R$ 74.990</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 1.0 Flex</li>
+                        <li>Quilometragem: 25.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Cinza</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="Fiat_Argo.jpg" alt="Mini 1">
+                            <img src="Fiat_Argo_2.jpeg" alt="Mini 2">
+                            <img src="Fiat_Argo_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <img src="FIat_Cronos.webp">
-                <div class="card-text">
-                    <h4><b>Fiat Cronos</b></h4>
-                    <p>Sedã seminovo, espaçoso e moderno</p>
-                    <p>Preço: R$ 89.900</p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Hyundai_HB20.jpg">
-                <div class="card-text">
-                    <h4><b>Hyunday HB20</b></h4>
-                    <p>Seminovo com excelente conectividade</p>
-                    <p>Preço: R$ 82.490</p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-               </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
+                <img class="card-img" src="FIat_Cronos.webp" alt="Fiat Cronos">
+                <div class="card-info">
+                    <h2>Fiat Cronos</h2>
+                    <p class="detalhes-curtos">Ano: 2022 | Modelo: 1.3 Precision</p>
+                    <p class="detalhes-curtos">Preço: R$ 89.900</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 1.3 Flex</li>
+                        <li>Quilometragem: 15.000 km</li>
+                        <li>Câmbio: Automático</li>
+                        <li>Cor: Preto</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="FIat_Cronos.webp" alt="Mini 1">
+                            <img src="FIat_Cronos_2.jpeg" alt="Mini 2">
+                            <img src="FIat_Cronos_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-               </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
+                <img class="card-img" src="Hyundai_HB20.jpg" alt="Hyundai HB20">
+                <div class="card-info">
+                    <h2>Hyundai HB20</h2>
+                    <p class="detalhes-curtos">Ano: 2021 | Modelo: 1.6 Comfort</p>
+                    <p class="detalhes-curtos">Preço: R$ 82.490</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 1.6 Flex</li>
+                        <li>Quilometragem: 30.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Preto</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="Hyundai_HB20.jpg" alt="Mini 1">
+                            <img src="Hyundai_HB20_2.jpeg" alt="Mini 2">
+                            <img src="Hyundai_HB20_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
+                <img class="card-img" src="HYundai_Creta.jpg" alt="Hyundai Creta">
+                <div class="card-info">
+                <h2>Hyundai Creta</h2>
+                <p class="detalhes-curtos">Ano: 2022 | Modelo: 2.0 Prestige</p>
+                <p class="detalhes-curtos">Preço: R$ 123.990</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                <div class="detalhes-completos hidden">
+                    <ul>
+                    <li>Motorização: 2.0 Flex</li>
+                    <li>Quilometragem: 12.000 km</li>
+                    <li>Câmbio: Automático</li>
+                    <li>Cor: Prata</li>
+                    </ul>
+                    <div class="galeria">
+                    <img src="HYundai_Creta.jpg" alt="Mini 1">
+                    <img src="HYundai_Creta_2.jpeg" alt="Mini 2">
+                    <img src="HYundai_Creta_3.jpeg" alt="Mini 3">
+                    </div>
+                    <button class="btn-contato">Compre agora</button>
                 </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-               </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
+                <img class="card-img" src="Honda_city.webp" alt="Honda City">
+                <div class="card-info">
+                <h2>Honda City</h2>
+                <p class="detalhes-curtos">Ano: 2023 | Modelo: EXL</p>
+                <p class="detalhes-curtos">Preço: R$ 115.000</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                <div class="detalhes-completos hidden">
+                    <ul>
+                    <li>Motorização: 1.5 Flex</li>
+                    <li>Quilometragem: 8.000 km</li>
+                    <li>Câmbio: CVT</li>
+                    <li>Cor: Branco</li>
+                    </ul>
+                    <div class="galeria">
+                    <img src="Honda_city.webp" alt="Mini 1">
+                    <img src="Honda_city_2.jpeg" alt="Mini 2">
+                    <img src="Honda_city_3.jpeg" alt="Mini 3">
+                    </div>
+                    <button class="btn-contato">Compre agora</button>
                 </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-               </div>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
+                <img class="card-img" src="Honda_HR-V.webp" alt="Honda HR-V">
+                <div class="card-info">
+                    <h2>Honda HR-V</h2>
+                    <p class="detalhes-curtos">Ano: 2022 | Modelo: Touring</p>
+                    <p class="detalhes-curtos">Preço: R$ 149.900</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 1.5 Turbo</li>
+                        <li>Quilometragem: 10.000 km</li>
+                        <li>Câmbio: CVT</li>
+                        <li>Cor: Preto</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="Honda_HR-V.webp" alt="Mini 1">
+                            <img src="Honda_HR-V_2.jpeg" alt="Mini 2">
+                            <img src="Honda_HR-V_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <img src="">
-                <div class="card-text">
-                    <h4><b></b></h4>
-                    <p></p>
-                    <p></p>
+                <img class="card-img" src="Renault_Kwid.jpg" alt="Renault Kwid">
+                <div class="card-info">
+                <h2>Renault Kwid</h2>
+                <p class="detalhes-curtos">Ano: 2022 | Modelo: Zen</p>
+                <p class="detalhes-curtos">Preço: R$ 69.990</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                <div class="detalhes-completos hidden">
+                    <ul>
+                    <li>Motorização: 1.0 Flex</li>
+                    <li>Quilometragem: 18.000 km</li>
+                    <li>Câmbio: Manual</li>
+                    <li>Cor: Branco</li>
+                    </ul>
+                    <div class="galeria">
+                    <img src="Renault_Kwid.jpg" alt="Mini 1">
+                    <img src="Renault_Kwid_2.jpeg" alt="Mini 2">
+                    <img src="Renault_Kwid_3.jpeg" alt="Mini 3">
+                    </div>
+                    <button class="btn-contato">Compre agora</button>
                 </div>
-                <div class="container">
-                    <a href="" target="_blank"><button class="btn-card">Comprar</button></a>
-               </div>
+                </div>
             </div>
 
-        </div>
+            <div class="card">
+                <img class="card-img" src="Renault_Fluence.jpg" alt="Renault Fluence">
+                <div class="card-info">
+                <h2>Renault Fluence</h2>
+                <p class="detalhes-curtos">Ano: 2020 | Modelo: Dynamique</p>
+                <p class="detalhes-curtos">Preço: R$ 98.500</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                <div class="detalhes-completos hidden">
+                    <ul>
+                    <li>Motorização: 2.0 Flex</li>
+                    <li>Quilometragem: 45.000 km</li>
+                    <li>Câmbio: CVT</li>
+                    <li>Cor: Preto</li>
+                    </ul>
+                    <div class="galeria">
+                    <img src="Renault_Fluence.jpg" alt="Mini 1">
+                    <img src="Renault_Fluence_2.jpeg" alt="Mini 2">
+                    <img src="Renault_Fluence_3.jpeg" alt="Mini 3">
+                    </div>
+                    <button class="btn-contato">Compre agora</button>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="volkswagen-polo.jpg" alt="Volkswagen Polo">
+                <div class="card-info">
+                <h2>Volkswagen Polo</h2>
+                <p class="detalhes-curtos">Ano: 2021 | Modelo: Comfortline</p>
+                <p class="detalhes-curtos">Preço: R$ 92.990</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                <div class="detalhes-completos hidden">
+                    <ul>
+                    <li>Motorização: 1.0 TSI</li>
+                    <li>Quilometragem: 22.000 km</li>
+                    <li>Câmbio: Automático</li>
+                    <li>Cor: Prata</li>
+                    </ul>
+                    <div class="galeria">
+                    <img src="volkswagen-polo.jpg" alt="Mini 1">
+                    <img src="Volkswagen-polo-2.jpeg" alt="Mini 2">
+                    <img src="Volkswagen-polo-3.jpeg" alt="Mini 3">
+                    </div>
+                    <button class="btn-contato">Compre agora</button>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="volkswagen_jettaGLI-2024.jpg" alt="Volkswagen Jetta">
+                <div class="card-info">
+                    <h2>Volkswagen Jetta</h2>
+                    <p class="detalhes-curtos">Ano: 2024 | Modelo: GLI 2.0 TSI</p>
+                    <p class="detalhes-curtos">Preço: R$ 189.990</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 2.0 TSI</li>
+                        <li>Quilometragem: 0 km</li>
+                        <li>Câmbio: DSG</li>
+                        <li>Cor: Vermelho</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="volkswagen_jettaGLI-2024.jpg" alt="Mini 1">
+                            <img src="Volkswagen_jetta_2.jpeg" alt="Mini 2">
+                            <img src="Volkswagen_jetta_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1>Motos</h1>
+        <section class="secao-motos">
+            <div class="card">
+                <img class="card-img" src="Yamaha-Fazer-250.jpg" alt="Yamaha Fazer 250">
+                <div class="card-info">
+                    <h2>Yamaha Fazer 250</h2>
+                    <p class="detalhes-curtos">Ano: 2022 | Modelo: ABS</p>
+                    <p class="detalhes-curtos">Preço: R$ 23.490</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 250cc Flex</li>
+                        <li>Quilometragem: 12.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Vermelha</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="Yamaha-Fazer-250.jpg" alt="Mini 1">
+                            <img src="Yamaha-Fazer-250-2.jpeg" alt="Mini 2">
+                            <img src="Yamaha-fazer-250-3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="yamaha-xtz-250-lander.jpg" alt="Yamaha XTZ 250 Lander">
+                <div class="card-info">
+                    <h2>Yamaha XTZ 250 Lander</h2>
+                    <p class="detalhes-curtos">Ano: 2021 | Modelo: Lander ABS</p>
+                    <p class="detalhes-curtos">Preço: R$ 27.890</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 250cc Flex</li>
+                        <li>Quilometragem: 10.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Dourado personalizado</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="yamaha-xtz-250-lander.jpg" alt="Mini 1">
+                            <img src="Yamaha-xtz-250-lander-2.jpeg" alt="Mini 2">
+                            <img src="Yamaha-xtz-250-lander-3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="Yamaha_MT-03.webp" alt="Yamaha MT-03">
+                <div class="card-info">
+                    <h2>Yamaha MT-03</h2>
+                    <p class="detalhes-curtos">Ano: 2023 | Modelo: ABS</p>
+                    <p class="detalhes-curtos">Preço: R$ 33.690</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 321cc</li>
+                        <li>Quilometragem: 5.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Preto fosco</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="Yamaha_MT-03.webp" alt="Mini 1">
+                            <img src="Yamaha_MT-03_2.jpeg" alt="Mini 2">
+                            <img src="Yamaha_MT-03_3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="suzuki-burgman-i.jpg" alt="Suzuki Burgman 125i">
+                <div class="card-info">
+                    <h2>Suzuki Burgman 125i</h2>
+                    <p class="detalhes-curtos">Ano: 2020 | Modelo: Scooter</p>
+                    <p class="detalhes-curtos">Preço: R$ 14.990</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 125cc</li>
+                        <li>Quilometragem: 20.000 km</li>
+                        <li>Câmbio: Automático</li>
+                        <li>Cor: Amarela</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="suzuki-burgman-i.jpg" alt="Mini 1">
+                            <img src="suzuki-burgman-i-2.jpeg" alt="Mini 2">
+                            <img src="suzuki-burgman-i-3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="suzuki-v-strom650.jpg" alt="Suzuki V-Strom 650XT">
+                <div class="card-info">
+                    <h2>Suzuki V-Strom 650XT</h2>
+                    <p class="detalhes-curtos">Ano: 2022 | Modelo: Adventure Touring</p>
+                    <p class="detalhes-curtos">Preço: R$ 52.990</p>
+                    <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver detalhes</button>
+                    <div class="detalhes-completos hidden">
+                        <ul>
+                        <li>Motorização: 645cc</li>
+                        <li>Quilometragem: 7.000 km</li>
+                        <li>Câmbio: Manual</li>
+                        <li>Cor: Vermelho</li>
+                        </ul>
+                        <div class="galeria">
+                            <img src="suzuki-v-strom650.jpg" alt="Mini 1">
+                            <img src="suzuki-v-strom650-2.jpeg" alt="Mini 2">
+                            <img src="suzuki-v-strom650-3.jpeg" alt="Mini 3">
+                        </div>
+                        <button class="btn-contato">Compre agora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-compra">
+            <h2>Formulário de Compra</h2>
+            <form action="compra.php" method="POST">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="veiculo">Veículo de interesse:</label>
+                <input type="text" id="veiculo" name="veiculo" placeholder="Ex: Honda City 2023">
+
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar solicitação</button>
+            </form>
+        </section>
+
+        <section id="form-venda">
+            <h2>Formulário de Venda</h2>
+            <form action="venda.php" method="POST">
+                <label for="nome-v">Nome completo:</label>
+                <input type="text" id="nome-v" name="nome" required>
+
+                <label for="cpf-v">CPF:</label>
+                <input type="text" id="cpf-v" name="cpf" required placeholder="000.000.000-00">
+
+                <label for="email-v">E-mail:</label>
+                <input type="email" id="email-v" name="email" required>
+
+                <label for="telefone-v">Telefone:</label>
+                <input type="tel" id="telefone-v" name="telefone" required>
+
+                <label for="tipo">Tipo de veículo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecione</option>
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                </select>
+
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required placeholder="Ex: Fiat Cronos 1.3 2022">
+
+                <label for="quilometragem">Quilometragem:</label>
+                <input type="number" id="quilometragem" name="quilometragem" required>
+
+                <label for="preco">Preço desejado:</label>
+                <input type="number" id="preco" name="preco" required>
+
+                <label for="mensagem-v">Observações:</label>
+                <textarea id="mensagem-v" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar proposta</button>
+            </form>
+        </section>
+
+
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Velocittà. Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        function alterarTema() {
+            const select = document.getElementById('tema');
+            const temaSelecionado = select.value;
+            document.body.classList.toggle('tema-escuro', temaSelecionado === 'escuro');
+        }
+
+        /****************************************************************/
+
+        const inputBusca = document.getElementById('textBusca');
+        const banner = document.querySelector('.banner');
+        const h1s = document.querySelectorAll('h1');
+
+        inputBusca.addEventListener('keyup', function () {
+            const termo = inputBusca.value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            if (termo.length > 0) {
+                if (banner) banner.style.display = 'none';
+                h1s.forEach(h => h.style.display = 'none');
+            } else {
+                if (banner) banner.style.display = 'block';
+                h1s.forEach(h => h.style.display = 'block');
+            }
+
+            cards.forEach(function (card) {
+                const texto = card.innerText.toLowerCase();
+
+                if (texto.includes(termo)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        /***************************************************************/
+
+        function toggleDetalhes(botao) {
+            const detalhes = botao.nextElementSibling;
+            const visivel = !detalhes.classList.contains('hidden');
+
+            if (visivel) {
+                detalhes.classList.add('hidden');
+                botao.textContent = 'Ver detalhes';
+            } else {
+                detalhes.classList.remove('hidden');
+                botao.textContent = 'Ocultar detalhes';
+            }
+        }
+
+        /*****************************************************************/
+        const formCompra = document.getElementById('form-compra');
+        const formVenda = document.getElementById('form-venda');
+
+        document.querySelectorAll('.dropdown-content a').forEach(link => {
+            if (link.textContent.includes('Anunciar')) {
+                link.addEventListener('click', () => {
+                    formVenda.style.display = 'block';
+                    formCompra.style.display = 'none';
+                    window.scrollTo({ top: formVenda.offsetTop, behavior: 'smooth' });
+                });
+            }
+        });
+
+        document.querySelectorAll('.btn-contato').forEach(botao => {
+            botao.addEventListener('click', () => {
+                formCompra.style.display = 'block';
+                formVenda.style.display = 'none';
+                window.scrollTo({ top: formCompra.offsetTop, behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
 </html>

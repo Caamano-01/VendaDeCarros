@@ -53,6 +53,18 @@ header {
     width: 200px;
     height: auto;
 }
+
+.tema-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tema-selector label,
+.tema-selector select {
+  font-size: 1rem;
+  color: black;
+}
 /************************************/
 
 /**************** Nav *****************/
@@ -61,7 +73,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-     position: sticky;
+    position: sticky;
     top: 120px;
     z-index: 999;
 }
@@ -117,36 +129,105 @@ nav {
 /*****************************************/
 
 /***************** Main ******************/
-.todos-cards {
+.banner {
+  width: 100%;
+  height: 500px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+.secao-carros, .secao-motos {
   display: flex;
   flex-wrap: wrap;
-}
-
-.card {
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgb(147, 147, 147);
-  transition: 0.1s;
-  width: calc(20% - 20px);
-  border-radius: 5px;
-  margin: 10px;
-}
-
-.card-text {
-  margin-left: 8px;
 }
 
 .card h4 {
   color: #2A2A2A;
   font-size: 1.1rem;
-  margin: 16px 0 10px;
-  width: fit-content;
-  border-radius: 50px;
-
 }
 
-.card img {
-  border-radius: 5px;
+.card {
+  width: calc(20% - 20px);
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
   width: 100%;
+  height: 180px;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-info h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.detalhes-curtos {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.btn-contato{
+  animation: pulsar 1.5s infinite ease-in-out;
+  transition: background-color 0.3s;
+}
+
+.btn-detalhes,
+.btn-contato {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5C2581;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-detalhes:hover,
+.btn-contato:hover {
+  background-color: #3DA639;
+}
+
+.detalhes-completos {
+  margin-top: 10px;
+}
+
+.detalhes-completos ul {
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.galeria {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.galeria img {
+  width: calc(33.3% - 5px);
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.hidden {
+  display: none;
 }
 
 .card:hover {
@@ -161,13 +242,70 @@ nav {
   cursor: pointer;
   padding: 15px;
   font-size: 0.9rem;
-
 }
 
 .btn-card:hover {
   background-color: #3dff36;
 }
+
+/****************form*******************/
+#form-compra,
+#form-venda {
+  display: none;
+  padding: 20px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #3DA639;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5C2581;
+}
+
 /*****************************************/
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #3DA639;
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #3DA639;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #3DA639;
+  }
+}
 
 /*************** Footer ******************/
 footer{
@@ -178,3 +316,92 @@ footer{
     justify-content: center;
 }
 /*****************************************/
+
+
+
+
+
+
+
+
+
+
+/************** Tema Escuro ****************/
+body.tema-escuro {
+  background-color: #000;
+  color: #fff;
+}
+
+body.tema-escuro header,
+body.tema-escuro main,
+body.tema-escuro article {
+  background-color: #000;
+  color: #fff;
+}
+
+body.tema-escuro .card {
+  background-color: #0c0c0c;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgb(201, 201, 201);
+}
+
+body.tema-escuro .card:hover {
+  box-shadow: 10px 10px 3px 0 rgb(201, 201, 201)
+}
+
+body.tema-escuro .card h4 {
+  color: #fff;
+}
+
+body.tema-escuro .tema-selector label {
+  color: #fff;
+}
+
+body.tema-escuro #form-compra,
+body.tema-escuro #form-venda {
+  background: #000;
+  border: 1px solid #ccc;
+}
+/*******************************************/
+
+
+
+
+
+
+
+
+
+
+/************** Media Queries **************/
+@media (max-width: 600px) {
+  .card {
+    width: 50%;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    top: 157px;
+  }
+
+}
+
+@media (min-width:601px) and (max-width:768px) {
+  .card {
+    width: calc(33.3% - 20px);
+  }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+  .card {
+    width: calc(25% - 20px);
+  }
+}
+/*******************************************/
