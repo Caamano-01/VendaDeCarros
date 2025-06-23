@@ -126,6 +126,14 @@ nav {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.textContato {
+  color: #f9f9f9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #5C2581;
+}
 /*****************************************/
 
 /***************** Main ******************/
@@ -306,7 +314,12 @@ button:hover {
     box-shadow: 0 0 0 #3DA639;
   }
 }
-
+/*****************************************/
+.text-qs {
+  font-size: 1.1rem;
+  margin: 35px;
+  text-align: justify;
+}
 /*************** Footer ******************/
 footer{
     background-color: #5C2581;

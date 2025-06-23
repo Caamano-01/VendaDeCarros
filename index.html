@@ -6,10 +6,10 @@
     <title>Velocittà</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <img class="logo" src="logo.png" alt="logo">
         <div class="busca">
@@ -26,17 +26,16 @@
         </div>
     </header>
 
-    <!-- Nav -->
     <nav>
         <div class="dropdown">
             <button class="btnMenu">Contato</button>
             <div class="dropdown-content">
                 <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Central de Vendas</p>
-                <a href="#">0800-300-1234</a>
-                <a href="#">4000-1234</a>
+                <p class="textContato">0800-300-1234</p>
+                <p class="textContato">4000-1234</p>
                 <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Atendimento ao Cliente</p>
-                <a href="#">0800-300-2345</a>
-                <a href="#">4000-2345</a>
+                <p class="textContato">0800-300-2345</p>
+                <p class="textContato">4000-2345</p>
             </div>
         </div>
 
@@ -52,28 +51,25 @@
             <button class="btnMenu">Carros</button>
             <div class="dropdown-content">
                 <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Carros</p>
-                <a href="#">Fiat</a>
-                <a href="#">Hyundai</a>
-                <a href="#">Honda</a>
-                <a href="#">Renault</a>
-                <a href="#">Volkswagen</a>
+                <a href="#" data-marca="fiat">Fiat</a>
+                <a href="#" data-marca="hyundai">Hyundai</a>
+                <a href="#" data-marca="honda">Honda</a>
+                <a href="#" data-marca="renault">Renault</a>
+                <a href="#" data-marca="volkswagen">Volkswagen</a>
                 <p style="padding: 8px 16px; margin: 0; font-weight: bold; color: white;">Motos</p>
-                <a href="#">Yamaha</a>
-                <a href="#">Suzuki</a>
+                <a href="#" data-marca="yamaha">Yamaha</a>
+                <a href="#" data-marca="suzuki">Suzuki</a>
             </div>
         </div>
 
         <div class="dropdown">
             <button class="btnMenu">Empresa</button>
             <div class="dropdown-content">
-                <a href="#">Quem somos</a>
-                <a href="#">Trabalhe conosco</a>
-                <a href="#">Blog</a>
+                <a href="#quem-somos">Quem somos</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main -->
     <main>
 
         <img class="banner" alt="banner" src="banner.jpeg">
@@ -81,7 +77,7 @@
         <h1>Carros</h1>
         
         <section class="secao-carros">
-            <div class="card">
+            <div class="card fiat">
                 <img class="card-img" src="Fiat_Argo.jpg" alt="Fiat Argo">
                 <div class="card-info">
                     <h2>Fiat Argo</h2>
@@ -105,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card fiat">
                 <img class="card-img" src="FIat_Cronos.webp" alt="Fiat Cronos">
                 <div class="card-info">
                     <h2>Fiat Cronos</h2>
@@ -129,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card hyundai">
                 <img class="card-img" src="Hyundai_HB20.jpg" alt="Hyundai HB20">
                 <div class="card-info">
                     <h2>Hyundai HB20</h2>
@@ -153,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card hyundai">
                 <img class="card-img" src="HYundai_Creta.jpg" alt="Hyundai Creta">
                 <div class="card-info">
                 <h2>Hyundai Creta</h2>
@@ -177,7 +173,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card honda">
                 <img class="card-img" src="Honda_city.webp" alt="Honda City">
                 <div class="card-info">
                 <h2>Honda City</h2>
@@ -201,7 +197,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card honda">
                 <img class="card-img" src="Honda_HR-V.webp" alt="Honda HR-V">
                 <div class="card-info">
                     <h2>Honda HR-V</h2>
@@ -225,7 +221,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card renault">
                 <img class="card-img" src="Renault_Kwid.jpg" alt="Renault Kwid">
                 <div class="card-info">
                 <h2>Renault Kwid</h2>
@@ -249,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card renault">
                 <img class="card-img" src="Renault_Fluence.jpg" alt="Renault Fluence">
                 <div class="card-info">
                 <h2>Renault Fluence</h2>
@@ -273,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card volkswagen">
                 <img class="card-img" src="volkswagen-polo.jpg" alt="Volkswagen Polo">
                 <div class="card-info">
                 <h2>Volkswagen Polo</h2>
@@ -297,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card volkswagen">
                 <img class="card-img" src="volkswagen_jettaGLI-2024.jpg" alt="Volkswagen Jetta">
                 <div class="card-info">
                     <h2>Volkswagen Jetta</h2>
@@ -324,7 +320,7 @@
 
         <h1>Motos</h1>
         <section class="secao-motos">
-            <div class="card">
+            <div class="card yamaha">
                 <img class="card-img" src="Yamaha-Fazer-250.jpg" alt="Yamaha Fazer 250">
                 <div class="card-info">
                     <h2>Yamaha Fazer 250</h2>
@@ -348,7 +344,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card yamaha">
                 <img class="card-img" src="yamaha-xtz-250-lander.jpg" alt="Yamaha XTZ 250 Lander">
                 <div class="card-info">
                     <h2>Yamaha XTZ 250 Lander</h2>
@@ -372,7 +368,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card yamaha">
                 <img class="card-img" src="Yamaha_MT-03.webp" alt="Yamaha MT-03">
                 <div class="card-info">
                     <h2>Yamaha MT-03</h2>
@@ -396,7 +392,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card suzuki">
                 <img class="card-img" src="suzuki-burgman-i.jpg" alt="Suzuki Burgman 125i">
                 <div class="card-info">
                     <h2>Suzuki Burgman 125i</h2>
@@ -420,7 +416,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card suzuki">
                 <img class="card-img" src="suzuki-v-strom650.jpg" alt="Suzuki V-Strom 650XT">
                 <div class="card-info">
                     <h2>Suzuki V-Strom 650XT</h2>
@@ -443,6 +439,33 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="#quem-somos">
+            <h1>Quem somos?</h1>
+            <p class="text-qs">A Velocittá nasceu em 2018 com um propósito claro: transformar a experiência de compra e venda de carros seminovos no Brasil. Fundada por Vitória Foscarini e Isabele Caamaño, duas mulheres movidas por paixão por carros e espírito empreendedor, a Velocittá surgiu como uma alternativa confiável, acolhedora e inteligente em um setor ainda dominado por informalidade e desconfiança.
+
+                Com formações complementares — Isabele na gestão de negócios e Vitória no atendimento e marketing —, elas uniram forças para criar uma empresa moderna, onde transparência e respeito ao cliente são prioridades. Desde o início, apostaram em um modelo que valoriza tanto quem deseja comprar quanto quem precisa vender seu carro usado, oferecendo suporte completo em todo o processo.
+            </p>
+            <p class="text-qs">
+                <b>O que a Velocittá oferece:</b>
+                <br>
+                Venda de seminovos com procedência garantida, revisados e com laudo técnico completo,
+
+                Serviço de vitrine para veículos de terceiros, com avaliação, divulgação, negociação e fechamento assistido,
+
+                Atendimento personalizado e transparente, com equipe treinada para lidar com diferentes perfis de clientes,
+
+                Ambiente seguro e acolhedor, especialmente pensado para que mulheres e iniciantes no mercado automotivo se sintam à vontade.<br>
+
+                O nome Velocittá, inspirado na palavra italiana para "velocidade", simboliza mais do que movimento: representa a agilidade, a leveza e o dinamismo com que a empresa conduz cada negociação — sempre com foco na confiança e na experiência do cliente.
+
+                Hoje, a Velocittá é reconhecida como um exemplo de inovação e liderança feminina no setor automotivo, provando que é possível unir competência, empatia e visão de mercado para criar um negócio sólido e inspirador.
+                <br>
+                <b>Velocittá</b>
+                <br>
+                Seu seminovo com mais confiança, menos complicação.
+            </p>
         </section>
 
         <section id="form-compra">
@@ -511,83 +534,10 @@
 
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Velocittà. Todos os direitos reservados</p>
     </footer>
 
-    <script>
-        function alterarTema() {
-            const select = document.getElementById('tema');
-            const temaSelecionado = select.value;
-            document.body.classList.toggle('tema-escuro', temaSelecionado === 'escuro');
-        }
-
-        /****************************************************************/
-
-        const inputBusca = document.getElementById('textBusca');
-        const banner = document.querySelector('.banner');
-        const h1s = document.querySelectorAll('h1');
-
-        inputBusca.addEventListener('keyup', function () {
-            const termo = inputBusca.value.toLowerCase();
-            const cards = document.querySelectorAll('.card');
-
-            if (termo.length > 0) {
-                if (banner) banner.style.display = 'none';
-                h1s.forEach(h => h.style.display = 'none');
-            } else {
-                if (banner) banner.style.display = 'block';
-                h1s.forEach(h => h.style.display = 'block');
-            }
-
-            cards.forEach(function (card) {
-                const texto = card.innerText.toLowerCase();
-
-                if (texto.includes(termo)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-        /***************************************************************/
-
-        function toggleDetalhes(botao) {
-            const detalhes = botao.nextElementSibling;
-            const visivel = !detalhes.classList.contains('hidden');
-
-            if (visivel) {
-                detalhes.classList.add('hidden');
-                botao.textContent = 'Ver detalhes';
-            } else {
-                detalhes.classList.remove('hidden');
-                botao.textContent = 'Ocultar detalhes';
-            }
-        }
-
-        /*****************************************************************/
-        const formCompra = document.getElementById('form-compra');
-        const formVenda = document.getElementById('form-venda');
-
-        document.querySelectorAll('.dropdown-content a').forEach(link => {
-            if (link.textContent.includes('Anunciar')) {
-                link.addEventListener('click', () => {
-                    formVenda.style.display = 'block';
-                    formCompra.style.display = 'none';
-                    window.scrollTo({ top: formVenda.offsetTop, behavior: 'smooth' });
-                });
-            }
-        });
-
-        document.querySelectorAll('.btn-contato').forEach(botao => {
-            botao.addEventListener('click', () => {
-                formCompra.style.display = 'block';
-                formVenda.style.display = 'none';
-                window.scrollTo({ top: formCompra.offsetTop, behavior: 'smooth' });
-            });
-        });
-    </script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
